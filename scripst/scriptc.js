@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     featureLinkElems.forEach((btn, index) => {
         btn.addEventListener('click', () => {
-            if (featureLinkElems[index].classList.contains('feature__link_active')) {
+            if (btn.classList.contains('feature__link_active')) {
                 featureSubElems[index].classList.add('hidden');  //закрытие списка при нажатии на его стрелку
-                featureLinkElems[index].classList.remove('feature__link_active'); //стрелка как при закрытом списке
+                btn.classList.remove('feature__link_active'); //стрелка как при закрытом списке
             } else {
             featureSubElems.forEach((featureSubElem) => {
                 featureSubElem.classList.add('hidden');  //Закрыть список при открытии нового
